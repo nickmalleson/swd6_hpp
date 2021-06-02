@@ -1,3 +1,6 @@
+import math
+
+@profile
 def primes(n):
     if n==2:
         return [2]
@@ -5,7 +8,8 @@ def primes(n):
         return []
 
     s=list(range(3,n+1,2))
-    mroot = n ** 0.5
+    #mroot = n ** 0.5
+    mroot = math.sqrt(n)
     half=(n+1)//2-1
     i=0
     m=3
